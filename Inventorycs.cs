@@ -14,5 +14,9 @@ namespace Lesson_6_Class
         {
             products.Add(product);
         }
+        public void Print()
+        {
+            Console.WriteLine(products);
+        }
     }
 }
