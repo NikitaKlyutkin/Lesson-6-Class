@@ -11,10 +11,12 @@ namespace Lesson_6_Class
 {
     internal class Initializator
     {
+        Inventorycs inventory = new Inventorycs();
+        inventory.products = new List<Product>();
+
         internal Inventorycs Initialize()
         {
             Food apple = new Food(12, "Apple", 20, 12.2m);
-            Inventorycs inventory = new Inventorycs();
             inventory.AddProduct(apple);
             return inventory;
         }

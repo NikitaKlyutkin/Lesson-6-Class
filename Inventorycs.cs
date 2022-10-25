@@ -10,6 +10,9 @@ namespace Lesson_6_Class
     internal class Inventorycs
     {
         internal List<Product> products;
+        
+
+
         public void AddProduct(Product product)
         {
             products.Add(product);
