@@ -48,6 +48,7 @@ namespace Lesson_6_Class
 
         public void SortForFoods<T>() where T : Food
         {
+
             
             foreach (T food in products)
             {
