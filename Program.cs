@@ -5,4 +5,4 @@ Initializator initializator = new Initializator();
 Inventorycs inventory = initializator.Initialize();
 
 initializator.Initialize();
-inventory.Print();
+inventory.PrintAllProduct();
