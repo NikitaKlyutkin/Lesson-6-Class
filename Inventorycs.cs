@@ -46,17 +46,39 @@ namespace Lesson_6_Class
 
         }
 
-        public void SortForFoods<T>() where T : Food
+        public List<T> SortByType<T>() where T : Product
         {
-
+            var resultSortedList = new List<T>();
             
-            foreach (T food in products)
+            foreach (var product in products)
             {
-                Console.WriteLine(food._name);
-                Console.WriteLine(food._price);
-                Console.WriteLine(food._quantity);
-                Console.WriteLine(food._bestBeforeDate);
+                var castedProduct = product as T;
+                if(castedProduct != null)
+                    resultSortedList.Add(castedProduct);
             }
+            foreach(var product in resultSortedList)
+            {
+                Food? food = product as Food;
+                Chemical? chemical = product as Chemical;
+                Machinery? machinery = product as Machinery;
+                Console.WriteLine("______________");
+                Console.WriteLine(product._name);
+                Console.WriteLine(product._price);
+                Console.WriteLine(product._quantity);
+                if (food == product)
+                {
+                    Console.WriteLine(food._bestBeforeDate);
+                }
+                else if (chemical == product)
+                {
+                    Console.WriteLine(chemical._notForChildren);
+                }
+                else if (machinery == product)
+                {
+                    Console.WriteLine(machinery._forHome);
+                }
+            }
+            return resultSortedList;
         }
 
     }

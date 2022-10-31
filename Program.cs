@@ -6,4 +6,7 @@ Inventorycs inventory = initializator.Initialize();
 
 initializator.Initialize();
 inventory.PrintAllProduct();
-inventory.SortForFoods<Food>();
+
+Console.WriteLine("_____________________");
+Console.WriteLine("Sort by Food:");
+List<Food> result = inventory.SortByType<Food>();
